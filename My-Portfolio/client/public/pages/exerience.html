@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <title>Shiva Rama Krishna | Full Stack Developer</title>
+  </head>
+  <body>
+    <canvas id="rainCanvas"></canvas>
+    <canvas id="dotsCanvas"></canvas>
+
+    <label class="switch">
+      <span class="label-text">Light Mode</span>
+      <input type="checkbox" id="darkModeSwitch" />
+      <span class="slider round"></span>
+    </label>
+
+    <div class="content-wrapper" id="Content-wrapper">
+      <a href="/uploads/resume.pdf" id="download-button" download>
+        <button class="btn"><i class="fa fa-download"></i> Download</button>
+      </a>
+      <div id="dropdown-menu">
+        <button class="menu-button" onclick="toggleMenu(this)">☰</button>
+        <div id="menu-content" class="menu-content">
+          <a href="#my-profile">My Profile</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#languages">Languages</a>
+          <a href="#interests">Interests</a>
+          <a href="#hobbies">Hobbies</a>
+          <a href="#progress">Progress</a>
+          <a href="#contact-info">Contact</a>
+        </div>
+      </div>
+
+      <div id="my-profile" class="menu-options">
+        <!-- <img
+          src="/file/1"
+          alt="Profile Image"
+           -->
+        <img src="/file/1" alt="Profile Picture" id="profile-image" />
+
+        <span
+          class="upload-btn"
+          onclick="window.location.href='/pages/upload.html';"
+        >
+          <i class="fas fa-plus"></i>
+        </span>
+
+        <!-- <div id="profile-image"> -->
+
+        <!-- </div> -->
+        <h1 id="username">Kurra Shiva Rama Krishna</h1>
+        <p id="bio">
+          A passionate software developer with a keen interest in web
+          technologies and a strong foundation in computer science principles.
+        </p>
+        <p id="location">Location: Middlesbrough, England</p>
+        <p id="motive">
+          Detail-oriented and highly motivated Full Stack Developer and AI
+          Innovator with a strong academic background and a practical mindset.
+          Adept at designing, building, and deploying scalable applications
+          across web, mobile, and AI domains. Demonstrated experience in
+          delivering high-impact projects from scratch, using modern frameworks
+          and design patterns. Proven ability to bridge the gap between user
+          needs and software solutions. Actively seeking a Tier 2 Sponsorship
+          role in the UK to contribute to innovative teams and deliver
+          measurable results.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

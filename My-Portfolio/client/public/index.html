@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <title>Shiva Rama Krishna | Full Stack Developer</title>
+  </head>
+  <body>
+    <canvas id="rainCanvas"></canvas>
+    <canvas id="dotsCanvas"></canvas>
+
+    <label class="switch">
+      <span class="label-text">Light Mode</span>
+      <input type="checkbox" id="darkModeSwitch" />
+      <span class="slider round"></span>
+    </label>
+
+    <div class="content-wrapper" id="Content-wrapper">
+      <a href="/uploads/resume.pdf" id="download-button" download>
+        <button class="btn"><i class="fa fa-download"></i> Download</button>
+      </a>
+      <div id="dropdown-menu">
+        <button class="menu-button" onclick="toggleMenu(this)">☰</button>
+        <div id="menu-content" class="menu-content">
+          <a href="#my-profile" class="menu-Elements">My Profile</a>
+          <a href="#skills" class="menu-Elements">Skills</a>
+          <a href="#projects" class="menu-Elements">Projects</a>
+          <a href="#education" class="menu-Elements">Education</a>
+          <a href="#experience" class="menu-Elements" >Experience</a>
+          <a href="/pages/Achievements" class="menu-Elements">Achievements</a>
+          <a href="#certifications" class="menu-Elements">Certifications</a>
+          <a href="#languages" class="menu-Elements">Languages</a>
+          <a href="#interests" class="menu-Elements">Interests</a>
+          <a href="#hobbies" class="menu-Elements">Hobbies</a>
+          <a href="#progress" class="menu-Elements">Progress</a>
+          <a href="/pages/Contact" class="menu-Elements">Contact</a>
+        </div>
+      </div>
+
+      <div id="my-profile" class="menu-options">
+        <!-- <img
+          src="/file/1"
+          alt="Profile Image"
+           -->
+        <img src="/file/1" alt="Profile Picture" id="profile-image" />
+
+        <span
+          class="upload-btn"
+          onclick="window.location.href='/pages/signin';"
+        >
+          <i class="fas fa-plus"></i>
+        </span>
+
+        <!-- <div id="profile-image"> -->
+
+        <!-- </div> -->
+        <h1 id="username">Kurra Shiva Rama Krishna</h1>
+        <p id="bio">
+          A passionate software developer with a keen interest in web
+          technologies and a strong foundation in computer science principles.
+        </p>
+        <p id="location">Location: Middlesbrough, England</p>
+        <p id="motive">
+          Detail-oriented and highly motivated Full Stack Developer and AI
+          Innovator with a strong academic background and a practical mindset.
+          Adept at designing, building, and deploying scalable applications
+          across web, mobile, and AI domains. Demonstrated experience in
+          delivering high-impact projects from scratch, using modern frameworks
+          and design patterns. Proven ability to bridge the gap between user
+          needs and software solutions. Actively seeking a Tier 2 Sponsorship
+          role in the UK to contribute to innovative teams and deliver
+          measurable results.
+        </p>
+      </div>
+
+      <div class="tech-marquee">
+        <div class="marquee-track">
+          
+          <div>
+            <div
+              class="circular-progress"
+              data-progress-color="#808080"
+              data-percentage="85"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-js"> </i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            JavaScript
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="50"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-node-js"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            Node.js
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="78"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-python"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            Python
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="83"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-java"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            Java
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="75"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-html5"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            HTML5
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="75"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-css3-alt"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            CSS3
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="76"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-react"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            React
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="80"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-node"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            Node.js
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="80"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-database"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            SQL
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="70"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-android"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            Kotlin
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="60"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-github"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            GitHub
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="70"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-flask"></i>
+                <div class="tooltip">
+                  JavaScript: Used in frontend & backend (Node.js)
+                </div>
+
+                <!-- <img src="html-icon.svg" class="icon" alternative="none" /> -->
+              </div>
+              <p class="percentage">50%</p>
+            </div>
+            Flask
+          </div>
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="90"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-git-alt"></i>
+                <div class="tooltip">Version control with Git</div>
+              </div>
+              <p class="percentage">90%</p>
+            </div>
+            Git
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="85"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-python"></i>
+                <div class="tooltip">
+                  Python: General-purpose scripting & AI
+                </div>
+              </div>
+              <p class="percentage">85%</p>
+            </div>
+            Python
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="70"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-code"></i>
+                <div class="tooltip">Scala: Functional and object-oriented</div>
+              </div>
+              <p class="percentage">70%</p>
+            </div>
+            Scala
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="75"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-golang"></i>
+                <div class="tooltip">Go: Fast, statically typed language</div>
+              </div>
+              <p class="percentage">75%</p>
+            </div>
+            Go
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="80"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-network-wired"></i>
+                <div class="tooltip">Kubernetes: Container orchestration</div>
+              </div>
+              <p class="percentage">80%</p>
+            </div>
+            Kubernetes
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="70"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-database"></i>
+                <div class="tooltip">NoSQL: Flexible schema data stores</div>
+              </div>
+              <p class="percentage">70%</p>
+            </div>
+            NoSQL
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="80"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-leaf"></i>
+                <div class="tooltip">MongoDB: Document-based database</div>
+              </div>
+              <p class="percentage">80%</p>
+            </div>
+            MongoDB
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="85"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-docker"></i>
+                <div class="tooltip">Docker: Containerization tool</div>
+              </div>
+              <p class="percentage">85%</p>
+            </div>
+            Docker
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="75"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-cogs"></i>
+                <div class="tooltip">Microservices architecture</div>
+              </div>
+              <p class="percentage">75%</p>
+            </div>
+            Microservices
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="65"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-drafting-compass"></i>
+                <div class="tooltip">CAD: Computer-Aided Design</div>
+              </div>
+              <p class="percentage">65%</p>
+            </div>
+            CAD
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="80"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-android"></i>
+                <div class="tooltip">Kotlin: Android development</div>
+              </div>
+              <p class="percentage">80%</p>
+            </div>
+            Kotlin
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="75"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-code"></i>
+                <div class="tooltip">C#: Backend with .NET</div>
+              </div>
+              <p class="percentage">75%</p>
+            </div>
+            C#
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="80"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-code"></i>
+                <div class="tooltip">C++: System-level programming</div>
+              </div>
+              <p class="percentage">80%</p>
+            </div>
+            C++
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="70"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-code"></i>
+                <div class="tooltip">C: Low-level programming</div>
+              </div>
+              <p class="percentage">70%</p>
+            </div>
+            C
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="75"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-node-js"></i>
+                <div class="tooltip">Express.js: Node.js framework</div>
+              </div>
+              <p class="percentage">75%</p>
+            </div>
+            Express
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="70"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-mobile-alt"></i>
+                <div class="tooltip">Flutter: Cross-platform mobile apps</div>
+              </div>
+              <p class="percentage">70%</p>
+            </div>
+            Flutter
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="60"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-vuejs"></i>
+                <div class="tooltip">
+                  Vue.js: Progressive frontend framework
+                </div>
+              </div>
+              <p class="percentage">60%</p>
+            </div>
+            Vue
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="75"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fas fa-wind"></i>
+                <div class="tooltip">Tailwind CSS: Utility-first CSS</div>
+              </div>
+              <p class="percentage">75%</p>
+            </div>
+            Tailwind
+          </div>
+
+          <div>
+            <div
+              class="circular-progress"
+              data-percentage="85"
+              data-progress-color="#808080"
+              data-bg-color="#eee"
+              data-inner-circle-color="#fff"
+            >
+              <div class="inner-circle">
+                <i class="fab fa-bootstrap"></i>
+                <div class="tooltip">Bootstrap: Responsive UI framework</div>
+              </div>
+              <p class="percentage">85%</p>
+            </div>
+            Bootstrap
+          </div>
+        </div>
+      </div>
+     
+
+      <!-- === Future Work Certification Boxes === -->
+      <div class="cert-boxes">
+        <div class="cert-box">Upcoming: TensorFlow Specialist</div>
+        <div class="cert-box">Planned: DevOps with AWS</div>
+        <div class="cert-box">Goal: Cybersecurity Fundamentals</div>
+        <div class="cert-box">Future: Kubernetes + Docker</div>
+      </div>
+    </div>
+
+    <div id="skills" class="menu-options">
+      <h2>Skills</h2>
+      <p>Languages: JavaScript, Java, Python, Kotlin, HTML5, CSS3, SQL</p>
+      <p>Frontend: React.js, Vite, Tailwind CSS, Bootstrap</p>
+      <p>Backend: Node.js, Express.js, Flask</p>
+      <p>Databases: MySQL, PostgreSQL, Firebase</p>
+      <p>AI/ML: YOLOv8, CNN, PyTorch, OpenCV</p>
+    </div>
+
+    <div id="Projects" class="menu-options">
+      <h1>Projects</h1>
+      <div class="projects">
+        <h2>Autonomous Vehicle Object Detection</h2>
+        🚗 Real-Time Object Detection for Autonomous Vehicles (YOLOv8 & YOLOv11)
+        — 90% Complete Designed and trained real-time detection models using
+        YOLOv8 and conceptual YOLOv11 for autonomous traffic systems. Achieved
+        mAP@0.5 of 0.558, real-time inference speed at ~7.8ms per image, and
+        robust detection across 5+ classes. Integrated CNN-transformer hybrid
+        models and deployed on low-resource edge systems.
+      </div>
+
+      <div class="projects">
+        <h2>Java Inventory Management System</h2>
+        📊 Java Inventory Management System — 100% Complete Built a complete
+        inventory management tool in Java using Swing GUI following OOP
+        principles. Applied Observer Pattern for low-stock alerting and Adapter
+        Pattern to integrate incompatible stock sources (ASC/MSM). Utilized Java
+        I/O and CSV parsing for persistent data and user-friendly console-based
+        operations.
+      </div>
+      <div class="projects">
+        <h2>AI Snake Game with Reinforcement Learning</h2>
+        💪 AI Snake Game with Reinforcement Learning — 85% Complete Engineered
+        an autonomous Snake game agent using Python, PyGame, and Q-Learning
+        algorithms. Developed environment-state modeling and reward strategy
+        using Deep Q Networks for optimal performance.
+      </div>
+      <div class="projects">
+        <h2>Malaria Detection with CNN</h2>
+        🧪 Malaria Detection with CNN — 95% Complete Created a medical image
+        classification system using CNN, deployed using Flask API. Integrated
+        image preprocessing, augmentation, and trained the model for accurate
+        classification of infected blood cells.
+      </div>
+      <div class="projects">
+        <h2>Career Quiz Android App</h2>
+        📱 Career Quiz Android App — 90% Complete Developed using Kotlin,
+        integrated Firebase Authentication, speech recognition, and
+        text-to-speech. Followed MVVM architecture, designed responsive layouts,
+        and implemented multi-level career quiz features.
+      </div>
+    </div>
+
+    <div id="education" class="menu-options">
+      <h2>Education</h2>
+      <div class="edu-block">
+        <h3>MSc in Computer Science</h3>
+        <p>Teesside University, UK (2023–2025)</p>
+        <p><strong>Grade:</strong> Merit</p>
+      </div>
+      <div class="edu-block">
+        <h3>B.Tech in Electrical & Electronics Engineering</h3>
+        <p>Scient Institute of Technology, RR Dist (2017–2021)</p>
+        <p><strong>Percentage:</strong> 71%</p>
+      </div>
+      <div class="edu-block">
+        <h3>Intermediate – MPC</h3>
+        <p>JNVRR, Gopanpally, RR Dist</p>
+        <p><strong>Percentage:</strong> 63%</p>
+      </div>
+      <div class="edu-block">
+        <h3>Schooling</h3>
+        <p>St. Mary’s Vidya Nikethan High School, Champapet, Hyderabad</p>
+      </div>
+    </div>
+
+    <div id="experience" class="menu-options">
+      <h2>experience</h2>
+      Real-Time Object Detection (YOLOv8 & YOLOv11) – Achieved mAP@0.5 of 0.558,
+      7.8 ms inference time; integrated CNN-Transformer hybrid models for edge
+      deployment Java Swing Inventory App – Engineered a desktop app with
+      low-stock alerts and CSV synchronization using Observer and Adapter
+      patterns AI Snake Game – Built with Python & PyGame using Deep Q-Learning;
+      automated gameplay through reinforcement-learning models Malaria Detection
+      API – Developed a CNN-based Flask API for infected blood-cell detection
+      with data preprocessing and high predictive accuracy Kotlin Android Quiz
+      App – Created an interactive mobile app using Firebase Authentication,
+      speech-to-text, and MVVM architectural patterns
+    </div>
+    <div id="achievements" class="menu-options">
+      <h2>Achievements</h2>
+      📌 Results-driven: I have delivered production-grade applications with
+      clear performance metrics and real-world applicability.
+      <br />
+      📌 Pattern-savvy: I used of OOP patterns demonstrates depth of
+      architecture and maintainability.
+      <br />
+      📌 AI-integrator: My ability to embed ML/AI into software stacks shows
+      strong cross-disciplinary capabilities.
+      <br />
+      📌 Initiative & Leadership: Independently planning, executing, and
+      deploying multiple high-impact projects highlights your hands-on
+      capability.
+    </div>
+    <div id="certifications" class="menu-options">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Python for Data Science – IBM via Coursera</li>
+        <li>
+          Full Stack Web Development – FreeCodeCamp (Certification of 300+
+          hours)
+        </li>
+        <li>Machine Learning with Python – Stanford Online</li>
+        <li>Introduction to Cloud Computing – AWS Academy</li>
+      </ul>
+    </div>
+
+    <div id="languages" class="menu-options">
+      <h2>Languages</h2>
+      Telugu Hindi English
+    </div>
+    <div id="interests" class="menu-options">
+      <h2>interests</h2>
+      Problem solving Coding Learning new technologies Open source contributions
+      Exploring AI and ML applications Traveling and cultural exchange engaging
+      in tech communities
+    </div>
+    <div id="hobbies" class="menu-options">
+      <h2>Hobbies</h2>
+      Reading books Playing chess Hiking and outdoor activities Photography
+      Cooking and experimenting with new recipes Volunteering in community tech
+      initiatives
+    </div>
+    <div id="progress" class="menu-options">
+      <h2>Project Progress Overview</h2>
+      <ul>
+        <li>Real-Time Object Detection: <strong>90%</strong></li>
+        <li>Java Inventory Management: <strong>100%</strong></li>
+        <li>AI Snake Game: <strong>85%</strong></li>
+        <li>Malaria Detection (CNN + Flask): <strong>95%</strong></li>
+        <li>Career Quiz App (Android + Firebase): <strong>90%</strong></li>
+      </ul>
+    </div>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: shiva@example.com</p>
+      <p>LinkedIn: linkedin.com/in/shivaramakrishna</p>
+      <p>GitHub: github.com/shivaramakrishna</p>
+    </section>
+    <!-- <nav class="bottom-nav">
+        <ul>
+          <li>
+            <a href="#home"><i class="fas fa-home"></i><span>Home</span></a>
+          </li>
+          <li>
+            <a href="#about"><i class="fas fa-user"></i><span>About</span></a>
+          </li>
+          <li>
+            <a href="#projects"
+              ><i class="fas fa-code"></i><span>Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="#skills"
+              ><i class="fas fa-tools"></i><span>Skills</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><i class="fas fa-envelope"></i><span>Contact</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    -->
+    <footer>
+      Full Stack Developer, React.js, Node.js, Python, Flask, YOLOv8, CNN, Java,
+      Kotlin, Android, Firebase, SQL, REST API, AI Engineer, Deep Learning, Tier
+      2 Sponsorship, Graduate Visa, Software Engineer UK
+    </footer>
+    <script src="/script.js"></script>
+    <!-- <script src="/public/script.js"></script> -->
+  </body>
+</html>
