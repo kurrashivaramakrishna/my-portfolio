@@ -1,0 +1,2 @@
+# my-portfolio
+HTML,CSS,JAVASCRIPT,MYSQL,NODEJS
